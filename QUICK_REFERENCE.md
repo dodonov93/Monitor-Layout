@@ -4,7 +4,7 @@
 
 ### Phase 1: Set Up Oracle Cloud VM (30 minutes)
 - [ ] Create Oracle Cloud free tier account
-- [ ] Launch ARM VM (4 OCPU, 24 GB RAM)
+- [ ] Launch ARM VM (2 OCPU, 12 GB RAM)
 - [ ] Configure firewall rules (ports 80, 443)
 - [ ] Save VM public IP address
 - [ ] Download SSH private key

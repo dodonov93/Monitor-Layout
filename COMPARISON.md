@@ -37,7 +37,7 @@ You're currently hitting the **50 GB data transfer limit** on Turso's free tier.
 **Pros:**
 - ✅ **$0 forever** (save $348/year)
 - ✅ **10 TB/month data transfer** (200x Turso free tier!)
-- ✅ **24 GB RAM** + **4 CPU cores**
+- ✅ **12 GB RAM** + **2 CPU cores**
 - ✅ **200 GB storage**
 - ✅ Full control over everything
 - ✅ Can run other services too
@@ -67,8 +67,8 @@ You're currently hitting the **50 GB data transfer limit** on Turso's free tier.
 | **Annual Cost** | $0 | $348 | $0 |
 | **Data Transfer** | 50 GB | 500 GB | **10,000 GB (10 TB)** |
 | **Storage** | 9 GB | 500 GB | 200 GB |
-| **RAM** | N/A | N/A | 24 GB |
-| **CPU** | N/A | N/A | 4 cores |
+| **RAM** | N/A | N/A | 12 GB |
+| **CPU** | N/A | N/A | 2 cores |
 | **Databases** | 500 | Unlimited | Unlimited |
 | **Row Reads** | 1B/month | Unlimited | Unlimited |
 | **Row Writes** | 25M/month | Unlimited | Unlimited |

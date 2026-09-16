@@ -53,7 +53,7 @@ Total:   $1,044
 │  Oracle Cloud Free Tier                │
 ├────────────────────────────────────────┤
 │  ✅ 10 TB data transfer (200x more!)   │
-│  ✅ 24 GB RAM + 4 CPUs                 │
+│  ✅ 12 GB RAM + 2 CPUs                 │
 │  ✅ 200 GB storage                     │
 │  ✅ Better performance                 │
 │  ✅ $0/month forever                   │
@@ -133,13 +133,13 @@ $100 │        ╱
 ```
 Free Tier Allocation vs Your Needs
 
-CPU (4 cores):
-Allocated: ████████████████████
-Your need: ████ (20%)
+CPU (2 cores):
+Allocated: ██████████
+Your need: ████ (40%)
 
-RAM (24 GB):
-Allocated: ████████████████████
-Your need: ████ (20%)
+RAM (12 GB):
+Allocated: ██████████
+Your need: ███ (30%)
 
 Storage (200 GB):
 Allocated: ████████████████████

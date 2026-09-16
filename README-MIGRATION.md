@@ -10,7 +10,7 @@ You've hit Turso's 50 GB data transfer limit. This guide will help you migrate t
 |---------------------|----------------|----------------------|
 | 50 GB transfer (maxed out) | Turso Starter: $29/month | **Oracle VM: $0/month** |
 | Need to upgrade | 500 GB transfer | **10,000 GB transfer** |
-| | $348/year cost | **24 GB RAM + 4 CPUs** |
+| | $348/year cost | **12 GB RAM + 2 CPUs** |
 | | | **$0 forever** |
 
 **Annual Savings:** $348 by choosing Oracle VM over Turso Starter
@@ -60,7 +60,7 @@ All scripts are in the `scripts/` directory and are ready to use:
 
 ### Phase 1: Set Up Oracle VM
 1. Create Oracle Cloud account (5 min)
-2. Launch ARM VM (4 OCPU, 24 GB RAM) (5 min)
+2. Launch ARM VM (2 OCPU, 12 GB RAM) (5 min)
 3. Configure firewall rules (5 min)
 4. SSH into VM (2 min)
 5. Run `vm-setup.sh` (10 min)
@@ -185,7 +185,7 @@ A: Easy rollback - just change DNS back to Vercel. Your Turso setup stays runnin
 A: Yes! It's their "Always Free" tier, not a trial. See [oracle.com/cloud/free](https://www.oracle.com/cloud/free/)
 
 **Q: Can I upgrade later if needed?**
-A: Yes! Oracle offers paid tiers if you need more resources. But the free tier is very generous (24 GB RAM, 4 CPUs).
+A: Yes! Oracle offers paid tiers if you need more resources. But the free tier is generous enough for most small-medium apps (12 GB RAM, 2 CPUs).
 
 ---
 
