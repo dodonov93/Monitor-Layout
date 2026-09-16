@@ -1,0 +1,86 @@
+# Caddyfile for Monitor Layout Application
+# Copy this to /etc/caddy/Caddyfile on your Oracle VM
+
+# ====================
+# TESTING CONFIGURATION (HTTP only)
+# Use this when testing with IP address or before DNS is configured
+# ====================
+# Uncomment the following block for testing:
+
+# :80 {
+#     reverse_proxy localhost:3000
+#     
+#     encode gzip
+#     
+#     log {
+#         output file /var/log/caddy/access.log
+#     }
+# }
+
+# ====================
+# PRODUCTION CONFIGURATION (Auto HTTPS)
+# Use this when you have a domain pointing to your VM
+# ====================
+# Replace 'your-domain.com' with your actual domain
+
+your-domain.com {
+    # Reverse proxy to Next.js app
+    reverse_proxy localhost:3000
+    
+    # Enable gzip compression
+    encode gzip
+    
+    # Security headers
+    header {
+        # Enable HSTS
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        
+        # Enable XSS protection
+        X-XSS-Protection "1; mode=block"
+        
+        # Referrer policy
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+    
+    # Access logs
+    log {
+        output file /var/log/caddy/access.log {
+            roll_size 100mb
+            roll_keep 5
+            roll_keep_for 720h
+        }
+    }
+    
+    # Error handling
+    handle_errors {
+        @5xx expression `{http.error.status_code} >= 500 && {http.error.status_code} < 600`
+        respond @5xx "Service temporarily unavailable" 503
+    }
+}
+
+# ====================
+# MULTIPLE DOMAINS (Optional)
+# If you want to serve both www and non-www versions
+# ====================
+# Uncomment and adjust as needed:
+
+# www.your-domain.com {
+#     redir https://your-domain.com{uri} permanent
+# }
+
+# ====================
+# TEST SUBDOMAIN (Optional)
+# Keep both test and production environments
+# ====================
+# Uncomment to run a test version on a subdomain:
+
+# test.your-domain.com {
+#     reverse_proxy localhost:3000
+#     encode gzip
+# }
